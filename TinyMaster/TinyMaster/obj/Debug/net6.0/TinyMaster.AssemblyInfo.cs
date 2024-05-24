@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TinyMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9ce85556d0d827ba008e9b1eb89c3dd9ca8d718")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f14a9b3b2878a221ff0b829629d57ba0f81bd2f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TinyMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TinyMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
