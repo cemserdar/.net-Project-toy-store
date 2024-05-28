@@ -1,0 +1,8 @@
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.AssemblyInfoInputs.cache
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.AssemblyInfo.cs
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.csproj.CoreCompileInputs.cache
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.MvcApplicationPartsAssemblyInfo.cache
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.RazorAssemblyInfo.cache
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.RazorAssemblyInfo.cs
+D:\Github\Freelance\TinyMaster\TinyMaster\obj\Debug\net6.0\TinyMaster.sourcelink.json
