@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAUwD4AAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T10:38:03.05Z",
               "IsPinned": true,
@@ -40,13 +40,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Home.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Home.cshtml",
-              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Home.cshtml",
-              "RelativeToolTip": "Views\\Home\\Home.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAADIAAAAHAAAA",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC0AAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-03T17:25:53.589Z",
               "EditorCaption": ""

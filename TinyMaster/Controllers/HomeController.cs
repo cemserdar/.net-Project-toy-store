@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Data.Common;
 using TinyMaster.Models;
 using TinyMaster.Models.Entities;
 using TinyMaster.ViewModels;
 
 namespace TinyMaster.Controllers
 {
-    [Route("api/[controller]")]
+
     public class HomeController : Controller
     {
         private readonly TinyMasterDbContext _db;
@@ -15,12 +16,8 @@ namespace TinyMaster.Controllers
         {
             _db = db;
         }
-
-
-        List<HomeViewModel> homeViewModel = new List<HomeViewModel>();
-
         [HttpGet]
-        public ActionResult Home()
+        public ActionResult Index()
         {
 
             List<ProductModel> model = new List<ProductModel>();
@@ -38,6 +35,7 @@ namespace TinyMaster.Controllers
                 model.Add(product);
             }
 
+            List<HomeViewModel> homeViewModel = new List<HomeViewModel>();
 
 
             for (int i = 0; i < model.Count(); i++)
@@ -60,9 +58,22 @@ namespace TinyMaster.Controllers
         public ActionResult Index(int UrunId)
         {
 
+            List<ProductModel> orderedItem = new List<ProductModel>();
 
+            var product = _db.Urunler.Where(x => x.Id == UrunId).FirstOrDefault();
 
-            return View("Index");
+            for (int i = 0; i < product.Isim.Count(); i++)
+            {
+                ProductModel productModel = new ProductModel();
+                {
+                    productModel.Id = UrunId;
+                    productModel.Isim = product.Isim;
+                    productModel.Fiyat = product.Fiyat;
+                    productModel.FotoUrl = product.FotoUrl;
+                }
+                orderedItem.Add(productModel);
+            }
+            return View(orderedItem);
         }
     }
 }
