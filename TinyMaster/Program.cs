@@ -1,16 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
 using TinyMaster.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+});
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDistributedMemoryCache();
-
 builder.Services.AddDbContext<TinyMasterDbContext>(options =>
 {
-	options.UseSqlServer(builder.Configuration.GetConnectionString("SQLCon"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLCon"));
 
 });
 
@@ -25,10 +27,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger");
+});
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 
 app.UseRouting();
 

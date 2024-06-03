@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using TinyMaster.Models;
 using TinyMaster.Models.Entities;
 using TinyMaster.ViewModels;
 
 namespace TinyMaster.Controllers
 {
-    // [Route("api/[controller]")]
+    [Route("api/[controller]")]
     public class HomeController : Controller
     {
         private readonly TinyMasterDbContext _db;
@@ -14,8 +15,12 @@ namespace TinyMaster.Controllers
         {
             _db = db;
         }
+
+
+        List<HomeViewModel> homeViewModel = new List<HomeViewModel>();
+
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Home()
         {
 
             List<ProductModel> model = new List<ProductModel>();
@@ -32,37 +37,32 @@ namespace TinyMaster.Controllers
                 };
                 model.Add(product);
             }
-            List<BranchModel> branchModel = new List<BranchModel>();
-            foreach (var item in _db.Subeler)
-            {
-                BranchModel branch = new BranchModel
-                {
-                    Id = item.Id,
-                    Isim = item.Isim,
-                    Adres = item.Adres,
-                    Rezervation = item.Rezervation
-                };
-                branchModel.Add(branch);
-            }
-            List<HomeViewModel> homeViewModel = new List<HomeViewModel>();
+
+
 
             for (int i = 0; i < model.Count(); i++)
             {
                 HomeViewModel viewModel = new HomeViewModel();
 
-                    viewModel.UrunAdi = model[i].Isim;
-                    viewModel.UrunFiyat = model[i].Fiyat;
-                    viewModel.SubeAdi = branchModel[i].Isim;
-                    viewModel.FotoUrl = model[i].FotoUrl;
-              
+                viewModel.UrunId = model[i].Id;
+                viewModel.UrunAdi = model[i].Isim;
+                viewModel.UrunFiyat = model[i].Fiyat;
+                viewModel.FotoUrl = model[i].FotoUrl;
+                viewModel.Aciklama = model[i].Aciklama;
 
                 homeViewModel.Add(viewModel);
             }
 
-
-
-
             return View(homeViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Index(int UrunId)
+        {
+
+
+
+            return View("Index");
         }
     }
 }

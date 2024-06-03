@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using TinyMaster.Models.Entities;
 
 namespace TinyMaster.Models
@@ -7,11 +6,11 @@ namespace TinyMaster.Models
 
     public class TinyMasterDbContext : DbContext
     {
-		public TinyMasterDbContext(DbContextOptions options) : base(options)
-		{
-		}
+        public TinyMasterDbContext(DbContextOptions options) : base(options)
+        {
+        }
 
-		public DbSet<CustomerModel> Musteriler { get; set; }
+        public DbSet<CustomerModel> Musteriler { get; set; }
         public DbSet<RezervationModel> UrunAyirmalar { get; set; }
         public DbSet<OrderModel> Siparisler { get; set; }
         public DbSet<OrderedItemModel> SiparisDetaylari { get; set; }

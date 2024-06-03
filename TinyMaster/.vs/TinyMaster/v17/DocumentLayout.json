@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Dotnet\\UpWork\\TinyMaster\\",
+  "WorkspaceRootPath": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|d:\\dotnet\\upwork\\tinymaster\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|d:\\dotnet\\upwork\\tinymaster\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|c:\\users\\cem serdar\\desktop\\development\\dotnet\\upwork\\tinymaster\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3509F416-400F-4276-9F74-414002266AE7}|TinyMaster.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\Dotnet\\UpWork\\TinyMaster\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\Dotnet\\UpWork\\TinyMaster\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAFAAAA",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAUwD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T21:04:15.381Z",
+              "WhenOpened": "2024-06-03T10:38:03.05Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Dotnet\\UpWork\\TinyMaster\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Category\\Index.cshtml",
-              "ToolTip": "D:\\Dotnet\\UpWork\\TinyMaster\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "Views\\Category\\Index.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAFAAAAA/AAAA",
+              "DocumentIndex": 0,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "Views\\Home\\Home.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADIAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T21:00:44.072Z",
+              "WhenOpened": "2024-06-03T17:25:53.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Development\\Dotnet\\Upwork\\TinyMaster\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T17:19:44.85Z",
               "EditorCaption": ""
             }
           ]

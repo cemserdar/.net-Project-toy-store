@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TinyMaster
 build_property.RootNamespace = TinyMaster
-build_property.ProjectDir = D:\Dotnet\UpWork\TinyMaster\
+build_property.ProjectDir = C:\Users\Cem Serdar\Desktop\Development\Dotnet\Upwork\TinyMaster\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Dotnet\UpWork\TinyMaster
+build_property.MSBuildProjectDirectory = C:\Users\Cem Serdar\Desktop\Development\Dotnet\Upwork\TinyMaster
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/About/Index.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Account/Index.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Blog/Index.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Dotnet/UpWork/TinyMaster/Views/Contact/Index.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Shared/Error.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Reservation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/_ViewImports.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/_ViewStart.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dotnet/UpWork/TinyMaster/Views/Shared/_Layout.cshtml]
+[C:/Users/Cem Serdar/Desktop/Development/Dotnet/Upwork/TinyMaster/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3bics959mh
