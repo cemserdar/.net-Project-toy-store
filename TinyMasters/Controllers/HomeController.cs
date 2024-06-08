@@ -55,22 +55,19 @@ namespace TinyMasters.Controllers
         [HttpPost]
         public IActionResult Index(int UrunId)
         {
-            var urun = _dataContext.ProductTbl.Where(u => u.Id == UrunId);
-
-
+            var urun = _dataContext.ProductTbl.Where(u => u.Id == UrunId).FirstOrDefault();
 
             Order order = new Order();
             {
                 order.ProductId = UrunId;
-                order.Price = urun.FirstOrDefault().Price;
-                order.Unit = urun.FirstOrDefault().Unit;
-                order.SubeId = urun.FirstOrDefault().SubeId;
-                
+                order.Price = urun.Price;
+                order.Unit = urun.Unit;
+                order.SubeId = urun.SubeId;               
             }
             OrderViewModel orderViewModel = new OrderViewModel()
             {
-                Name = urun.First().Name,
-                PictureUrl = urun.First().ImageUrl,
+                Name = urun.Name,
+                PictureUrl = urun.ImageUrl,
                 Price = order.Price,
                 Unit = order.Unit,
                 ProductId = order.ProductId,

@@ -16,33 +16,46 @@ namespace TinyMasters.Controllers
 
         public IActionResult Index(int ProductId)
         {
-            ReservationViewModel model = new ReservationViewModel();
-            var db = _context.ProductTbl.Where(d=>d.Id == ProductId);
-            
-            model.ProductId = ProductId;
-            model.SubeId = db.Select(s => s.SubeId).FirstOrDefault();
-            model.SubeAdi = _context.SubeTbl.Select(s=>s.Name).ToList();
-            model.KisiSayisi = _context.UserTbl.Select(p => p.SubeId).Count();
-            
-            Reservation reservation = new Reservation();
-            reservation.Product = model.ProductId;
-            reservation.HangiSube = model.SubeAdi.ToString();
-            reservation.Tarih = model.Date;
-            reservation.User = model.UserId;
-            
-            
+            var queryProductList = _context.ProductTbl.Where(d => d.Id == ProductId);
+            var subeIdList = queryProductList.GroupBy(gp => gp.SubeId).Select(gp => gp.Key).ToList();
+            var subeList = _context.SubeTbl.Where(s => subeIdList.Contains(s.Id)).Select(s => new SubeViewModel
+            {
+                SubeId = s.Id,
+                SubeName = s.Name
+            }).ToList();
 
-            
+            var product = queryProductList.FirstOrDefault();
+            var reservedCount = _context.ReservationTbl.Where(r => r.Product == ProductId).Count();
+
+            ReservationViewModel model = new ReservationViewModel()
+            {
+                ProductId = product.Id,
+                SubeList = subeList,
+                KisiSayisi = reservedCount,
+                Date = DateTime.UtcNow,
+            };
+
             return View(model);
         }
 
 
         [HttpPost]
-        public IActionResult Index(DateTime Date, int kisisayisi, string SubeAdi)
+        public IActionResult Index(ReservationViewModel model)
         {
             var context = _context.ReservationTbl;
-           
-            return View();
+            Reservation reservation = new Reservation();
+
+            var sube = _context.SubeTbl.Where(s => s.Id == model.SubeId).Select(s => s.Name).FirstOrDefault();
+            var product = _context.ProductTbl.Where(s => s.Id == model.ProductId).Select(s => s.Id).FirstOrDefault();
+
+            reservation.HangiSube = sube;
+            reservation.Tarih = model.Date;
+            reservation.Product = product;
+            reservation.User = model.UserId;
+
+            context.Add(reservation);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Home");
         }
     }
 }

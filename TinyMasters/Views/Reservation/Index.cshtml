@@ -6,37 +6,27 @@
 <h1>Ürün Ayırma</h1>
 
 
-    <form>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Tarih</label>
-            <input type="datetime-local" class="form-control" id="" placeholder="@Model.Date">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Şube</label>
-            <select class="form-control" id="Sube">
-                @for (int i = 0; i < Model.SubeAdi.Count; i++)
-            {
-                <option>@Model.SubeAdi[i]</option>
-            }
-            </select>
-        </div>
-       
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Kişi Sayisi</label>
-            <input class="form-control" type="text" placeholder="@Model.KisiSayisi" readonly>
-            @* <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> *@
-        </div>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Date" class="control-label">Tarih</label>
+        <input asp-for="Date" class="form-control" />
+    </div>
 
-</form>
-<form asp-controller="Reservation" asp-action="Index" method="post">
-    <input type="hidden" class="form-control" name="Date" value="@Model.Date" />
-    <input type="hidden" class="form-control" name="kisisayisi" value="@Model.KisiSayisi" />
-    <input type="hidden" class="form-control" name="SubeAdi" value="@Model.SubeAdi" />
-    <input type="submit" value="Ürün Ayır" class="btn btn-primary" />
+    <div class="form-group">
+        <label asp-for="SubeId" class="control-label"></label>
+        <select asp-for="SubeId" asp-items="@(new SelectList(Model.SubeList, "SubeId", "SubeName"))" class="form-control">
+            <option value="">Select a Sube</option>
+        </select>
+        <span asp-validation-for="SubeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Kişi Sayisi</label>
+        <input class="form-control" type="text" placeholder="@Model.KisiSayisi" readonly>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Gönder" class="btn btn-primary" />
+    </div>
 </form>
 
-@*
-@if (ViewBag.Basarili)
-{
-    <div class="alert alert-success">Ürün ayırma işleminiz başarıyla tamamlanmıştır.</div>
-} *@

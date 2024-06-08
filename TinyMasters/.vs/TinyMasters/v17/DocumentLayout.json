@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\views\\user\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:views\\user\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\views\\sube\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:views\\sube\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|c:\\users\\cem serdar\\desktop\\upwork\\tinymasters\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646E0535-3428-4E6E-95AA-7656D5E2BC33}|TinyMasters.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +34,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cshtml",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\User\\User.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\User.cshtml",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\User\\User.cshtml",
+              "RelativeToolTip": "Views\\User\\User.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T12:35:15.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T12:21:13.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Sube\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sube\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Sube\\Index.cshtml",
+              "RelativeToolTip": "Views\\Sube\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T12:12:11.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Login\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Login\\Login.cshtml",
               "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Login\\Login.cshtml",
               "RelativeToolTip": "Views\\Login\\Login.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADoAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBkAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-07T11:41:10.036Z",
+              "WhenOpened": "2024-06-08T12:04:16.427Z",
               "EditorCaption": ""
             },
             {
@@ -49,35 +96,22 @@
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAASwDcAAAAMAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswBwAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T11:18:44.177Z",
+              "WhenOpened": "2024-06-08T08:22:26.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservationController.cs",
-              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\ReservationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReservationController.cs",
-              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\ReservationController.cs",
-              "RelativeToolTip": "Controllers\\ReservationController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB8AAAAMAAAA",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T11:08:17.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Cem Serdar\\Desktop\\Upwork\\TinyMasters\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADQAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-07T11:01:33.954Z",
+              "WhenOpened": "2024-06-08T11:42:19.182Z",
               "EditorCaption": ""
             }
           ]

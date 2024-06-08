@@ -25,35 +25,65 @@ namespace TinyMasters.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User user)
         {
-
-            user.Mail = _dataContext.UserTbl.Select(x => x.Name).FirstOrDefault();
-            user.Role = _dataContext.UserTbl.Select(x => x.Role).FirstOrDefault();
-
-            string UserRole = "User";
+            var role = user.Role = _dataContext.UserTbl.Select(x => x.Role).FirstOrDefault();
+            var userId = _dataContext.UserTbl.Select(x=>x.Id).FirstOrDefault();
+            user.Id = userId;
             string BranchRole = "Branch";
-            var claims = new List<Claim>();
-            if (user.Role == 1)
+            string UserRole = "User";
+            if (role == 1)
             {
-                new Claim(ClaimTypes.Email, user.Mail);
-                new Claim(ClaimTypes.Role, UserRole);
+                if (user.Mail == _dataContext.UserTbl.Select(x => x.Mail).FirstOrDefault() &&
+                user.Password == _dataContext.UserTbl.Select(x => x.Password).FirstOrDefault()
+                )
+                {
+                    List<Claim> claims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.Mail),
+                    new Claim(ClaimTypes.Role, UserRole)
+                };
 
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+
+
+                    AuthenticationProperties properties = new AuthenticationProperties()
+                    {
+                        AllowRefresh = true,
+
+                    };
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity), properties);
+                }
+                return RedirectToAction("User", "User",user);
             }
-            else if (user.Role == 2)
+            else if (role == 2)
             {
-                new Claim(ClaimTypes.Name, user.Mail);
-                new Claim(ClaimTypes.Role, BranchRole);
+                if (user.Mail == _dataContext.UserTbl.Select(x => x.Mail).FirstOrDefault() &&
+           user.Password == _dataContext.UserTbl.Select(x => x.Password).FirstOrDefault()
+           )
+                {
+                    List<Claim> claims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.Mail),
+                    new Claim(ClaimTypes.Role, BranchRole)
+                };
+
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    AuthenticationProperties properties = new AuthenticationProperties()
+                    {
+                        AllowRefresh = true,
+
+                    };
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                       new ClaimsPrincipal(claimsIdentity), properties);
+                }
+                return RedirectToAction("Index", "Sube",user);
             }
 
+            ViewData["ValidateMessage"] = "Kullanıcı Bulunamadı";
 
 
-
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-            var authProperties = new AuthenticationProperties();
-
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-            return RedirectToAction("Index", "Home");
+            return View();
         }
     }
 }

@@ -6,12 +6,27 @@ namespace TinyMasters.Controllers
 {
     public class CardController : Controller
     {
-        CardViewModel viewModel;
-        public IActionResult Index()
+        public IActionResult Index(CardModel card)
         {
-            CardModel card = new CardModel();
-           
-            return View();
+
+            List<CardViewModel> model = new List<CardViewModel>();
+            List<CardModel> cardModels = new List<CardModel>();
+            cardModels.Add(card);
+
+            foreach (var item in cardModels)
+            {
+                CardViewModel cardViewModel = new CardViewModel()
+                {
+                    Id = cardModels.Select(i => i.Id).FirstOrDefault(),
+                    Name = cardModels.Select(n => n.Name).FirstOrDefault(),
+                    ImageUrl = cardModels.Select(u => u.ImageUrl).FirstOrDefault(),
+                    Price = cardModels.Select(p => p.Price).FirstOrDefault(),
+                };
+                model.Add(cardViewModel);
+            }
+
+
+            return View(model);
         }
     }
 }

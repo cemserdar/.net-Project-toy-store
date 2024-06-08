@@ -7,22 +7,21 @@ namespace TinyMasters.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly DataContext _dataContext;
+        private readonly DataContext _context;
 
         public OrderController(DataContext dataContext)
         {
-            _dataContext = dataContext;
+            _context = dataContext;
         }
 
         public IActionResult Order(Order order)
         {
-            var db = _dataContext;
-            var product = db.ProductTbl.Where(p => p.Id == order.ProductId).ToList();
+            var product = _context.ProductTbl.Where(p => p.Id == order.ProductId).FirstOrDefault();
             OrderViewModel viewModel = new OrderViewModel()
             {
-                Name = product.FirstOrDefault().Name,
+                Name = product.Name,
                 ProductId = order.ProductId,
-                PictureUrl = product.FirstOrDefault().ImageUrl,
+                PictureUrl = product.ImageUrl,
                 Price = order.Price,
                 Unit = 1
             };
@@ -36,28 +35,26 @@ namespace TinyMasters.Controllers
         public IActionResult Order(int ProductId, int Unit)
         {
             int urunId = ProductId;
-            var orders = _dataContext.OrderTlb.Where(o => o.Id == ProductId).ToList();
-            var db = _dataContext;
-            var product = db.ProductTbl.Where(p => p.Id == ProductId).ToList();
+            //var orders = _context.OrderTlb.Where(o => o.Id == ProductId).ToList();
+            var product = _context.ProductTbl.Where(p => p.Id == ProductId).FirstOrDefault();
 
             Order model = new Order()
             {
                 ProductId = ProductId,
                 //UserId
-                SubeId = product.FirstOrDefault().SubeId,
-                Price = product.FirstOrDefault().Price,
+                SubeId = product.SubeId,
+                Price = product.Price,
                 Unit = 0
             };
 
-            Product pr = new Product();
+            //Product pr = new Product();
 
             for (int i = 0; i < Unit; i++)
             {
                 model.Unit =+ 1;
-                db.OrderTlb.Add(model);
-              
+                _context.OrderTlb.Add(model);              
             }
-            db.SaveChanges();
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Home");
 
