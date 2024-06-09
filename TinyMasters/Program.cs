@@ -29,6 +29,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 });
 
+builder.Services.AddSession();
 
 
 var app = builder.Build();
@@ -47,9 +48,10 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();

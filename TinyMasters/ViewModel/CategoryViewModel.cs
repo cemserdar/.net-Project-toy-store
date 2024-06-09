@@ -1,4 +1,6 @@
-﻿namespace TinyMasters.ViewModel
+﻿using TinyMasters.Models.Entity;
+
+namespace TinyMasters.ViewModel
 {
     public class CategoryViewModel
     {

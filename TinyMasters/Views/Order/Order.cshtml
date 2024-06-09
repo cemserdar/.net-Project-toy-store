@@ -18,7 +18,7 @@
 </head>
 <body>
     <section class="py-5">
-
+        <form method="post">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
@@ -32,20 +32,18 @@
                                 @Model.Price
                             </div>
                             <div>
-                                <label>Adet</label>
-                                <textarea inputmode="numeric">@Model.Unit</textarea>
+                                <label for="Unit">Adet</label>
+                                <input class="form-control" name="Unit" value="@Model.Unit"/>
                             </div>
                         </div>
                       
-                        <form asp-controller="Order" asp-action="Order" method="post" id="buton">
-                            <input type="hidden" class="form-control" name="ProductId" value="@Model.ProductId" />
-                            <input type="hidden" class="form-control" name="Unit" value="@Model.Unit" />
+                        
                             <input type="submit" value="Satın Al" class="btn btn-primary" />
-                           </form>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
     </section>
 
     <!-- Bootstrap core JS-->

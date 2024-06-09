@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using TinyMasters.Models;
 using TinyMasters.Models.Entity;
 using TinyMasters.ViewModel;
@@ -38,22 +39,16 @@ namespace TinyMasters.Controllers
             //var orders = _context.OrderTlb.Where(o => o.Id == ProductId).ToList();
             var product = _context.ProductTbl.Where(p => p.Id == ProductId).FirstOrDefault();
 
+            var sessionUser = JsonConvert.DeserializeObject<User>(HttpContext.Session.GetString("User"));
             Order model = new Order()
             {
                 ProductId = ProductId,
-                //UserId
+                UserId = sessionUser.Id,
                 SubeId = product.SubeId,
                 Price = product.Price,
-                Unit = 0
+                Unit = Unit
             };
-
-            //Product pr = new Product();
-
-            for (int i = 0; i < Unit; i++)
-            {
-                model.Unit =+ 1;
-                _context.OrderTlb.Add(model);              
-            }
+            _context.OrderTlb.Add(model);
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Home");

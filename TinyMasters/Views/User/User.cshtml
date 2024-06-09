@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@model List<TinyMasters.ViewModel.UserViewModel>
+@{
+    ViewData["Title"] = "User";
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,8 +26,58 @@
 </head>
 
 <body class="bg-gradient-primary">
+    <h3>Siparişler</h3>
+    <table class="table">
+        <thead>
 
-    
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ürün Adı</th>
+                <th scope="col">Fiyatı</th>
+                <th scope="col">Adet</th>
+            </tr>
+        </thead>
+        
+        @for (int i = 0; i < Model.Count; i++)
+        {
+             <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>@Model[i].ProductName</td>
+                    <td>@Model[i].ProductPrice</td>
+                    <td>@Model[i].Unit</td>
+                </tr>
+
+            </tbody>
+        }
+    </table>
+        <h3>Ayırılan Ürünler</h3>
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ürün Adı</th>
+                <th scope="col">Fiyatı</th>
+                <th scope="col">Adet</th>
+            </tr>
+        </thead>
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>@Model[i].ReservedProductName</td>
+                    <td>@Model[i].ProductPrice</td>
+                </tr>
+
+            </tbody>
+        }
+
+    </table>
+
+
 </body>
 
 </html>

@@ -20,7 +20,7 @@
 </head>
 <body>
     <section class="py-5">
-
+        <form method="post" asp-controller="Order" asp-action="Order">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
@@ -30,26 +30,29 @@
                     @foreach (var item in Model)
                     {
                         <div class="card h-100">
+                            <input type="hidden" class="form-control" name="ProductId" value="@item.Id" />
+                            <input type="hidden" class="form-control" name="Unit" value="1" />
                             <img class="card-img-top" src="@item.ImageUrl" />
 
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h3 class="fw-bolder">@item.Name</h3>
-                                    @item.Price
+                                    <p class="fw-bolder">@item.Name</p>
+                                    @item.Price 
                                 </div>
                             </div>
                         </div>
 
                     }
-                    <form asp-controller="Order" asp-action="Order" method="post" id="buton">
+                    @* <form asp-controller="Order" asp-action="Order" method="post" id="buton">
                         <input type="hidden" class="form-control" name="ProductId" value="@Model.Select(p=>p.Id)" />
-                        @* <input type="hidden" class="form-control" name="Unit" value="@Model.Unit" /> *@
+                        <input type="hidden" class="form-control" name="Unit" value="@Model.Unit" />
+                        
+                    </form> *@
                         <input type="submit" value="Satın Al" class="btn btn-primary" />
-                    </form>
-
                 </div>
             </div>
         </div>
+        </form>
     </section>
 
     <!-- Bootstrap core JS-->

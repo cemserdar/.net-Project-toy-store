@@ -17,19 +17,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="Index">Ana Sayfa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Reservation/Index">Ürün Ayır</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Home/Index">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="/About/Index">Hakkımızda</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Blog/Index">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Contact/Index">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Category/Index">Kategory</a></li>
 
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        </ul>
-                    </li>
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit" href="/Card/Index">
@@ -37,10 +30,10 @@
                         Sepet
                     </button>
                 </form>
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
+                <button type="submit" class="btn btn-outline-dark" href="/User/User">
+                    <i class="bi-cart-fill me-1" ></i>
                     Hesap
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">@* @Model.Miktar *@</span>
+                    <span class="badge bg-dark text-white ms-1 rounded-pill" >@* @Model.Miktar *@</span>
                 </button>
             </div>
         </div>

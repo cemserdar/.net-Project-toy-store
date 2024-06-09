@@ -11,5 +11,6 @@ namespace TinyMasters.Models.Entity
         public string HangiSube { get; set; }
         [ForeignKey("Product")]
         public int Product { get; set; }
+        public int Onay { get; set; }
     }
 }

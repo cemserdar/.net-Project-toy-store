@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using TinyMasters.Models.Entity;
 using TinyMasters.ViewModel;
 
@@ -6,25 +7,14 @@ namespace TinyMasters.Controllers
 {
     public class CardController : Controller
     {
-        public IActionResult Index(CardModel card)
+        public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("Cart") == null)
+                return View(new List<CardViewModel>());
 
-            List<CardViewModel> model = new List<CardViewModel>();
-            List<CardModel> cardModels = new List<CardModel>();
-            cardModels.Add(card);
-
-            foreach (var item in cardModels)
-            {
-                CardViewModel cardViewModel = new CardViewModel()
-                {
-                    Id = cardModels.Select(i => i.Id).FirstOrDefault(),
-                    Name = cardModels.Select(n => n.Name).FirstOrDefault(),
-                    ImageUrl = cardModels.Select(u => u.ImageUrl).FirstOrDefault(),
-                    Price = cardModels.Select(p => p.Price).FirstOrDefault(),
-                };
-                model.Add(cardViewModel);
-            }
-
+            var model = JsonConvert.DeserializeObject<List<CardViewModel>>(HttpContext.Session.GetString("Cart"));
+            if (model == null)
+                model = new List<CardViewModel>();
 
             return View(model);
         }

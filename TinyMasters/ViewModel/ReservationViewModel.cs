@@ -14,7 +14,7 @@ namespace TinyMasters.ViewModel
         public int SubeId { get; set; }
         public int ProductId { get; set; }
         public int KisiSayisi { get; set; }
-        public bool Onay { get; set; }
+        public int Onay { get; set; }
 
     }
 }

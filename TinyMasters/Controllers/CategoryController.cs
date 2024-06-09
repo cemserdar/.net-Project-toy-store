@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using TinyMasters.Models;
 using TinyMasters.Models.Entity;
 using TinyMasters.ViewModel;
@@ -17,6 +18,7 @@ namespace TinyMasters.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+
 
             var categorylist = await (from c in _dataContext.CategorieTbl
                                       select new CategoryViewModel()
@@ -40,19 +42,21 @@ namespace TinyMasters.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(int ProductId, string Name, Product product)
+        public async Task<IActionResult> Index(int ProductId, string Name)
         {
-            CardModel card = new CardModel();
+            var product = _dataContext.ProductTbl.Where(p => p.Id == ProductId).FirstOrDefault();
+            CardViewModel card = new CardViewModel();
             card.Id = ProductId;
-            card.Name = Name;
-            card.Price = _dataContext.ProductTbl.Where(p => p.Id == ProductId).Select(p => p.Price).FirstOrDefault();
-            card.ImageUrl = _dataContext.ProductTbl.Where(p => p.Id == ProductId).Select(p => p.ImageUrl).FirstOrDefault();
+            card.Name = product.Name;
+            card.Price = product.Price;
+            card.ImageUrl = product.ImageUrl;
 
-            List<CardModel> cardModels = new List<CardModel>();
+            List<CardViewModel> cardModels = new List<CardViewModel>();
             cardModels.Add(card);
 
-
-            return RedirectToAction("Index", "Card",cardModels);
+            var cart = JsonConvert.SerializeObject(cardModels);
+            HttpContext.Session.SetString("Cart", cart);
+            return RedirectToAction("Index", "Card");
         }
     }
 }
