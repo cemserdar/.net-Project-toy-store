@@ -38,6 +38,19 @@
             </tr>
         </thead>
         
+       @*  @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductPrice</td>
+                    <td>@item.Unit</td>
+                </tr>
+
+            </tbody>
+        } *@
+
         @for (int i = 0; i < Model.Count; i++)
         {
              <tbody>
@@ -51,31 +64,7 @@
             </tbody>
         }
     </table>
-        <h3>Ayırılan Ürünler</h3>
-    <table class="table">
-        <thead>
-
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Ürün Adı</th>
-                <th scope="col">Fiyatı</th>
-                <th scope="col">Adet</th>
-            </tr>
-        </thead>
-
-        @for (int i = 0; i < Model.Count; i++)
-        {
-            <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td>@Model[i].ReservedProductName</td>
-                    <td>@Model[i].ProductPrice</td>
-                </tr>
-
-            </tbody>
-        }
-
-    </table>
+        
 
 
 </body>

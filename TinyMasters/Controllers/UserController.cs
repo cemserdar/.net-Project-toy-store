@@ -25,16 +25,10 @@ namespace TinyMasters.Controllers
             List<Reservation> reservation = new List<Reservation>();
             var sessionUser = JsonConvert.DeserializeObject<User>(HttpContext.Session.GetString("User"));
 
-
             var userContex = _dataContext.UserTbl.Where(x => x.Id == sessionUser.Id);
             var orderContex = _dataContext.OrderTlb.Where(x => x.UserId == sessionUser.Id);
             var productContext = _dataContext.ProductTbl;
             var ProductId = orderContex.Where(x => x.UserId == sessionUser.Id).Select(x => x.ProductId).FirstOrDefault();
-            var reservedContext = _dataContext.ReservationTbl.Where(x => x.Product == ProductId);
-
-            var reserved = _dataContext.ReservationTbl.Where(x => x.User == sessionUser.Id).Select(x => x.Product).FirstOrDefault();
-
-
 
             sessionUser.Adress = userContex.Select(x => x.Adress).FirstOrDefault();
             sessionUser.Name = userContex.Select(x => x.Name).FirstOrDefault();
@@ -51,20 +45,22 @@ namespace TinyMasters.Controllers
 
             List<UserViewModel> viewModels = new List<UserViewModel>();
 
-            UserViewModel userViewModel = new UserViewModel();
+
             foreach (var item in orderContex)
             {
-                userViewModel.UserName = sessionUser.Name;
-                userViewModel.Unit = orderContex.Where(x => x.UserId == sessionUser.Id).Select(s => s.Unit).FirstOrDefault();
-                userViewModel.ProductPrice = orderContex.Where(x => x.UserId == sessionUser.Id).Select(x => x.Price).FirstOrDefault();
-                userViewModel.ProductName = productContext.Where(x => x.Id == ProductId).Select(x => x.Name).FirstOrDefault();
-                userViewModel.ProductImage = productContext.Where(x => x.Id == ProductId).Select(x => x.ImageUrl).FirstOrDefault();
-                userViewModel.ReservedProductImage = productContext.Where(x => x.Id == ProductId).Select(x => x.ImageUrl).FirstOrDefault();
-                //userViewModel.ReservedProductName = reservedContext.Where(x => x.Id == reserved).Select(x => x.Product);
-                userViewModel.ReservedProductStatu = statu;
+                UserViewModel userViewModel = new UserViewModel()
+                {
+                    UserName = sessionUser.Name,
+                    Unit = item.Unit,
+                    ProductPrice = item.Price,
+                    ProductName = productContext.Where(x => x.Id == ProductId).Select(x => x.Name).FirstOrDefault(),
+                    ProductImage = productContext.Where(x => x.Id == ProductId).Select(x => x.ImageUrl).FirstOrDefault(),
+                };
+                viewModels.Add(userViewModel);
             }
-            viewModels.Add(userViewModel);
             return View(viewModels);
         }
+
     }
 }
+

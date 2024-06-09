@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using TinyMasters.Models;
 using TinyMasters.Models.Entity;
 using TinyMasters.ViewModel;
@@ -44,7 +45,6 @@ namespace TinyMasters.Controllers
         {
             var context = _context.ReservationTbl;
             Reservation reservation = new Reservation();
-
             var sube = _context.SubeTbl.Where(s => s.Id == model.SubeId).Select(s => s.Name).FirstOrDefault();
             var product = _context.ProductTbl.Where(s => s.Id == model.ProductId).Select(s => s.Id).FirstOrDefault();
 
@@ -52,6 +52,7 @@ namespace TinyMasters.Controllers
             reservation.Tarih = model.Date;
             reservation.Product = product;
             reservation.User = model.UserId;
+            reservation.Onay = model.Onay;
 
             context.Add(reservation);
             _context.SaveChanges();

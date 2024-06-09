@@ -7,9 +7,5 @@
         public decimal ProductPrice { get; set; }
         public string ProductImage { get; set; }
         public int Unit { get; set; }
-
-        public string ReservedProductName { get; set; }
-        public string ReservedProductImage { get; set; }
-        public int ReservedProductStatu { get; set; }
     }
 }
