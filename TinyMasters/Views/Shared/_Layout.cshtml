@@ -1,4 +1,6 @@
-﻿ 
+﻿@using Newtonsoft.Json
+@using TinyMasters.Models.Entity
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +24,12 @@
                     <li class="nav-item"><a class="nav-link" href="/Blog/Index">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Contact/Index">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Category/Index">Kategory</a></li>
-
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit" href="/Card/Index">
-                        <i class="bi-cart-fill me-1"></i>
-                        Sepet
-                    </button>
-                </form>
-                <button type="submit" class="btn btn-outline-dark" href="/User/User">
-                    <i class="bi-cart-fill me-1" ></i>
+                <a href="/User/User" class="btn btn-outline-dark">
+                    <i class="bi-cart-fill me-1"></i>
                     Hesap
-                    <span class="badge bg-dark text-white ms-1 rounded-pill" >@* @Model.Miktar *@</span>
-                </button>
+                    <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                </a>
             </div>
         </div>
     </nav>
